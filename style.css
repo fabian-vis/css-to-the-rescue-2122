@@ -1,20 +1,31 @@
+
+/*  wat body styling */
 body {
 	margin: 0;
 	padding: 0;
-    height: 100vh;
+	/* Moet een standard waarde hebben anders werkt de thema functie niet */
+	background-color: #aa30f1;
+	text-align: center;
+	
+}
+
+/* Content styling alles centeren en custom properties */
+
+main {
+	background-color: var(--background-color);
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    background-image: url("./Images/windowsxp.jpg");
-    background-size: cover;
-    background-position: top; 
 }
 main > section {
 	position: absolute;
 }
+
+/* styling van alle 12 de vuurwerk streepjes van vuurwerk nummer 1*/
 main > section > section:nth-of-type(1) > article {
 	position: absolute;
-	left: 0px;
+	left: 0;
 	bottom: 0;
 	width: 4px;
 	height: 80px;
@@ -22,6 +33,17 @@ main > section > section:nth-of-type(1) > article {
     overflow: hidden;
 }
 
+main > section > section:nth-of-type(1) > article::before {
+	content: '';
+	position: absolute;
+	left: 0;
+    right: 0;
+    top: 100%;
+	height: 40px;
+    background-color: #f5cf52;
+}
+
+/* styling van alle 12 de vuurwerk streepjes van vuurwerk nummer 2*/
 main > section > section:nth-of-type(2) > article {
 	position: absolute;
 	left: 0px;
@@ -32,6 +54,16 @@ main > section > section:nth-of-type(2) > article {
     overflow: hidden;
 }
 
+main > section > section:nth-of-type(2) > article::before {
+	content: '';
+	position: absolute;
+	left: 0;
+    right: 0;
+    top: 100%;
+	height: 40px;
+    background-color: red;
+}
+/* styling van alle 12 de vuurwerk streepjes van vuurwerk nummer 3*/
 main > section > section:nth-of-type(3) > article {
 	position: absolute;
 	left: 25vw;
@@ -42,6 +74,17 @@ main > section > section:nth-of-type(3) > article {
 	overflow: hidden;
 }
 
+main > section > section:nth-of-type(3) > article::before {
+	content: '';
+	position: absolute;
+	left: 0;
+    right: 0;
+    top: 100%;
+	height: 40px;
+    background-color: blue;
+	
+}
+/* styling van alle 12 de vuurwerk streepjes van vuurwerk nummer 4*/
 main > section > section:nth-of-type(4) > article {
 	position: absolute;
 	left: 25vw;
@@ -52,52 +95,6 @@ main > section > section:nth-of-type(4) > article {
 	overflow: hidden;
 }
 
-main > div {
-	position: absolute;
-	left: Calc(50vw - 4px);
-    bottom: 0;
-    background-color: red;
-    width: 7.5px;
-	height:40px;
-	animation: pijltje 3s ease-out infinite;
-
-}
-main > section > section:nth-of-type(1) > article::before {
-	content: '';
-	position: absolute;
-	left: 0;
-    right: 0;
-    top: 100%;
-	height: 40px;
-    background-color: #f5cf52;
-	animation: explosion 3s ease-in-out infinite;
-	animation-delay: 1s;
-}
-
-main > section > section:nth-of-type(2) > article::before {
-	content: '';
-	position: absolute;
-	left: 0;
-    right: 0;
-    top: 100%;
-	height: 40px;
-    background-color: red;
-	animation: explosion 3s ease-in-out infinite;
-	animation-delay: 1s;
-}
-
-main > section > section:nth-of-type(3) > article::before {
-	content: '';
-	position: absolute;
-	left: 0;
-    right: 0;
-    top: 100%;
-	height: 40px;
-    background-color: blue;
-	animation: explosion 3s ease-in-out infinite;
-	animation-delay: 3s;
-}
-
 main > section > section:nth-of-type(4) > article::before {
 	content: '';
 	position: absolute;
@@ -106,13 +103,44 @@ main > section > section:nth-of-type(4) > article::before {
     top: 100%;
 	height: 40px;
     background-color: green;
-	animation: explosion 3s ease-in-out infinite;
-	animation-delay: 3s;
+}
+/* main > section > section:nth-of-type(5) > div {
+	position: absolute;
+	left: -25vw;
+	width: 10px;
+	height: 10px;
+	background-color: green;
+	border-radius: 10px;
+} */
+
+/* styling van de vuurpijl van vuurwerk nummer 1*/
+main > div:nth-of-type(1) {
+	position: absolute;
+	left: Calc(50vw - 4px);
+    bottom: 0;
+    background-color: red;
+    width: 10px;
+	height:10px;
+	border-radius: 10px;
+	opacity: 0;
+
 }
 
-@keyframes pijltje {
+main > div:nth-of-type(2) {
+	position: absolute;
+	background-color: blue;
+	width: 10px;
+	height:10px;
+	border-radius: 10px; 
+	bottom: 0;
+	left: 60vw;
+	opacity: 0;
+}
+
+/* animaties van de pijl en het vuurwerk */
+@keyframes pijltje1 {
 	0% {
-		top:100%;
+		top: 100%;
 	}
 	33% {
 		top: 50%;
@@ -128,6 +156,44 @@ main > section > section:nth-of-type(4) > article::before {
 
 }
 
+@keyframes pijltje2 {
+	0% {
+		bottom: 0;
+		left: 50vw;
+		
+	}
+	5% {
+		left: 55vw;
+	}
+	10% {
+		left: 60vw;
+	}
+	15% {
+		left: 65vw;
+	}
+	20% {
+		left: 70vw;
+	}
+	25% {
+		left: 80vw;
+	}
+	33% {
+		left: 75vw;
+		bottom: 60vh;
+		opacity: 1;
+	}
+	33.01% {
+		opacity: 0;
+	}
+	100% {
+		bottom: 60vh;
+		opacity: 0;
+	}
+
+}
+
+
+
 @keyframes explosion {
     0% {
         top: 100%
@@ -136,11 +202,11 @@ main > section > section:nth-of-type(4) > article::before {
         top: -50%;
     }
 }
-
+/* elk streepje van het vuurwerk wordt hier 30 graden gedraaid zodat je een mooi rondje krijgt. */
 article {
 	transform: rotate(Calc(30deg*var(--index)))translateY(-15px);
 }
-
+/* custom properties voor gemakt */
 article:nth-child(1) {
 	--index: 0;
 }
@@ -188,7 +254,34 @@ article:nth-child(11) {
 article:nth-child(12) {
 	--index: 11;
 }
+/* rotatie van andere vuurwerkshow */
 
+/* div {
+	transform: rotate(Calc(60deg*var(--index)))translateY(-60px);
+}
+div:nth-child(1) {
+	--index: 0;
+}
+
+div:nth-child(2) {
+	--index: 1;
+}
+
+div:nth-child(3) {
+	--index: 2;
+}
+
+div:nth-child(4) {
+	--index: 3;
+}
+
+div:nth-child(5) {
+	--index: 4;
+}
+
+div:nth-child(6) {
+	--index: 5;
+} */
 
 main > section > section:nth-of-type(1) {
 	left: 50%;
@@ -212,4 +305,107 @@ main > section > section:nth-of-type(4) {
 	left: 10vw;
 	top: 50vh;
 }
+ /* Als de checkbox gechecked is dan pas gaat de vuurwerk show aan */
+ input[type="checkbox"]:checked ~ main > section > section:nth-of-type(1) > article::before {
+	animation: explosion 3s ease-in-out infinite;
+	animation-delay: 1s;
+  }
+input[type="checkbox"]:checked ~ main > section > section:nth-of-type(2) > article::before {
+	animation: explosion 3s ease-in-out infinite;
+	animation-delay: 1s;
+  }
 
+input[type="checkbox"]:checked ~ main > section > section:nth-of-type(3) > article::before {
+	animation: explosion 3s ease-in-out infinite;
+	animation-delay: 1s;
+  }
+
+input[type="checkbox"]:checked ~ main > section > section:nth-of-type(4) > article::before {
+	animation: explosion 3s ease-in-out infinite;
+	animation-delay: 1s;
+  }
+input[type="checkbox"]:checked ~ main > div:nth-of-type(1) {
+	animation: pijltje1 3s cubic-bezier(0.165, 0.840, 0.960, 1.335) infinite;
+	opacity: 1;
+  }
+input[type="checkbox"]:checked ~ main > div:nth-of-type(2) {
+	animation: pijltje2 3s cubic-bezier(0.165, 0.840, 0.960, 1.335) infinite;
+	opacity: 1;
+  }
+
+/* light and dark mode */
+
+main > p {
+	font-size: 4em;
+	margin-top: 1em;
+	position: absolute;
+	top: 0;
+	left: 5vw;
+	opacity: 1;
+	transform: opacity 2s;
+  }
+  
+  main > p:first-of-type {
+	visibility: var(--visibility);
+  }
+
+  /* Checkbox */
+input[type="checkbox"] {
+	margin: 2em;
+  }
+  
+input[type="checkbox"],
+input[type="checkbox"] + label {
+	cursor: pointer;
+	color: white;
+	position: absolute;
+	top: 2vh;
+	left: 50%
+  }
+
+input[type="checkbox"]:checked ~ main {
+	background-color: #323846;
+	transition: background-color 1s;
+  }
+
+p:last-of-type,
+	input[type="checkbox"]:checked ~ main p:first-of-type {
+  visibility: var(--visibility);
+}
+
+input[type="checkbox"]:checked ~ main p:last-of-type {
+  visibility: visible;
+}
+
+
+@media (prefers-color-scheme: light) {
+	main {
+	  --background-color: #c8cac9;
+	}
+  
+	p:first-of-type {
+	  --visibility: visible;
+	}
+  
+	p:last-of-type {
+	  --visibility: hidden;
+	}
+  }
+  
+  @media (prefers-color-scheme: dark) {
+	main {
+	  --background-color: #323846;
+	}
+  
+	p:first-of-type {
+	  --visibility: hidden;
+	}
+  
+	p:last-of-type {
+	  --visibility: visible;
+	}
+  }
+  
+  input[type="checkbox"]:checked ~ main p:first-of-type {
+	visibility: hidden;
+  }
