@@ -1,6 +1,10 @@
 # CSS to the rescue
 
-Welkom bij mijn project van de minor Webdesign and development. Het doel van dit vak is dat wij een interactieve webpagina maken met alleen css. Javascript is niet toegestaan. Ik heb ervoor gekozen om een vuurwerk show te maken
+Welkom bij mijn project van de minor Webdesign and development. Het doel van dit vak is dat wij een interactieve webpagina maken met alleen CSS. Javascript is niet toegestaan. Ik heb ervoor gekozen om een vuurwerk show te maken
+
+## Resultaat
+
+Hier kan je de pagina bekijken [Vuurwerkshow](https://fabian-vis.github.io/vuurwerk-je-/ "Vuurwerkshow")
 
 ## Leerproces
 
