@@ -1,10 +1,15 @@
-# Week 1
+# CSS to the rescue
 
-Ik ben begonnen met het kiezen van een opdracht. Ik heb gekozen voor de vuurwerkshow. Ik denk dat hier genoeg uitdaging ligt aangezien dit mijn eerste keer is dat ik met animaties ga werken. Ik heb na veel proberen eindelijk een css animatie gemaakt die een beetje lijkt op een vuurwerkje. Verder probeerde ik werkend te krijgen dat er een light en dark mode thema in mijn website zit. Dit is nog niet helemaal gelukt.
+Welkom bij mijn project van de minor Webdesign and development. Het doel van dit vak is dat wij een interactieve webpagina maken met alleen css. Javascript is niet toegestaan. Ik heb ervoor gekozen om een vuurwerk show te maken
 
-# Week 2
+## Leerproces
 
-## 16 Feb
+Het werken met animaties is voor mij nieuw. Ik hoop daarom tijdens dit vak ook veel te kunnen experimenteren met animaties en alles wat daarbij komt kijken zodat ik dit later hopelijk kan gebruiken bij andere projecten. Verder probeer ik zo goed mogelijk gebruik te maken van selectoren en ga ik (proberen) absoluut geen classes en ids gebruiken.
 
-Ik ben verder gegaan met waar ik vorige week met vast zat: De light and dark thema modus. Het is mij uiteindelijk gelukt doormiddel van een checkbox met input:checked dat de background van de website veranderd. Ook is het mij gelukt dat de website zich aanpast aan de thema voorkeur van de gebruiker. Dit is gelukt doormiddel van: media (prefers-color-scheme: light).
+## Beoordelingscriteria
 
+![Beoordelingscriteria](images/beoordelingscriteria.png)
+
+## License
+
+MIT License.
