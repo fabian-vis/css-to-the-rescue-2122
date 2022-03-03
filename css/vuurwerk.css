@@ -1,0 +1,457 @@
+main > section {
+	position: absolute;
+}
+
+
+/*-------------------------------------------- Vuurpijl 1 -*/
+main > section > section:nth-of-type(1) > article {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 4px;
+	height: 80px;
+	transform-origin: 50% 100%;
+    overflow: hidden;
+}
+main > section > section:nth-of-type(1) > article::before {
+	content: '';
+	position: absolute;
+	left: 0;
+    right: 0;
+    top: 100%;
+	height: 40px;
+    background-color: #f5cf52;
+}
+
+main > section > section:nth-of-type(1) {
+	left: 50%;
+	top: 50%;
+	transform: scale(1);
+}
+
+/*-------------------------------------------- Vuurpijl 2 -*/
+main > section > section:nth-of-type(2) > article {
+	position: absolute;
+	left: 0px;
+	bottom: 0;
+	width: 4px;
+	height: 80px;
+	transform-origin: 50% 100%;
+    overflow: hidden;
+}
+main > section > section:nth-of-type(2) > article::before {
+	content: '';
+	position: absolute;
+	left: 0;
+    right: 0;
+    top: 100%;
+	height: 40px;
+    background-color: red;
+}
+
+main > section > section:nth-of-type(2) {
+	left: 10vw;
+	top: 50vh;
+	transform: rotate(15deg);
+}
+
+/*-------------------------------------------- Vuurpijl 3 -*/
+main > section > section:nth-of-type(3) > article {
+	position: absolute;
+	left: 25vw;
+	bottom: 15vh;
+	width: 4px;
+	height: 80px;
+	transform-origin: 50% 100%;
+	overflow: hidden;
+}
+
+main > section > section:nth-of-type(3) > article::before {
+	content: '';
+	position: absolute;
+	left: 0;
+    right: 0;
+    top: 100%;
+	height: 40px;
+    background-color: blue;
+}
+
+main > section > section:nth-of-type(3) {
+	left: 10vw;
+	top: 50vh;
+	transform: skew(15deg, 15deg);
+}
+
+/*-------------------------------------------- Vuurpijl 4 -*/
+main > section > section:nth-of-type(4) > article {
+	position: absolute;
+	left: 25vw;
+	bottom: 15vh;
+	width: 4px;
+	height: 80px;
+	transform-origin: 50% 100%;
+	overflow: hidden;
+}
+
+main > section > section:nth-of-type(4) > article::before {
+	content: '';
+	position: absolute;
+	left: 0;
+    right: 0;
+    top: 100%;
+	height: 40px;
+    background-color: green;
+}
+
+main > section > section:nth-of-type(4) {
+	left: 10vw;
+	top: 50vh;
+}
+
+
+/*-------------------------------------------- Vuurpijl 5 -*/
+main > section > section:nth-of-type(5) {
+	position: absolute;
+	left: -25vw;
+	border-radius: 50%;
+}
+main > section > section:nth-of-type(5) > article:nth-child(even) {
+	background-color: red;
+	width: 20px;
+	height: 25px;
+	position: absolute;
+	left: 0;
+	border-radius: 50%;
+	opacity:0;
+}
+
+main > section > section:nth-of-type(5) > article:nth-child(odd) {
+	background-color:blue;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	border-radius: 50%;
+	opacity: 0;
+}
+
+main > section > section:nth-of-type(5) > article:last-child {
+	background-color: green;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	border-radius: 50%;
+	opacity: 0;
+}
+
+/*-------------------------------------------- detonator vuurwerk -*/
+body div:nth-of-type(1) label {
+	
+	position: absolute;
+	z-index:2;
+	bottom: 0vh;
+	left: 55%;
+	background-color: red;
+	width: 100px;
+	height: 100px;
+	clip-path: polygon(89% 93%, 89% 84%, 79% 84%, 79% 48%, 88% 48%, 89% 39%, 10% 39%, 10% 46%, 21% 48%, 21% 83%, 10% 84%, 10% 92%);
+  }
+body div:first-of-type div {
+	background-color:grey;
+	z-index:2;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	bottom: -0.1vh;
+	left: 55%;
+	clip-path: polygon(52% 38%, 52% 20%, 74% 20%, 74% 11%, 26% 12%, 26% 19%, 48% 20%, 48% 38%);
+  }
+
+
+
+/*-------------------------------------------- Checkbox vuurpijlen -*/
+input[type="checkbox"]:nth-of-type(1):checked ~ main > section > section:nth-of-type(1) > article::before {
+	animation: explosion 3s ease-in-out 3 forwards;
+	animation-delay: 1s;
+  }
+
+input[type="checkbox"]:nth-of-type(1):checked ~ main > section > section:nth-of-type(2) > article::before {
+	animation: explosion 3s ease-in-out 3 forwards;
+	animation-delay: 1s;
+  }
+
+input[type="checkbox"]:nth-of-type(1):checked ~ main > section > section:nth-of-type(3) > article::before {
+	animation: explosion 3s ease-in-out 3;
+	animation-delay: 1s;
+  }
+
+input[type="checkbox"]:nth-of-type(1):checked ~ main > section > section:nth-of-type(4) > article::before {
+	animation: explosion 3s ease-in-out 3;
+	animation-delay: 1s;
+  }
+
+input[type="checkbox"]:nth-of-type(1):checked ~ main > section > section:nth-of-type(5) > article:nth-child(even) {
+	animation: vuurwerk3 1s 3 forwards;
+	animation-delay: 3s;
+	opacity: 0;
+}
+input[type="checkbox"]:nth-of-type(1):checked ~ main > section > section:nth-of-type(5) > article:nth-child(odd) {
+	animation: vuurwerk3 1s 3 forwards;
+	animation-delay: 3s;
+	opacity: 0;
+}
+
+/*-------------------------------------------- article roteren -*/
+/* elk streepje van het vuurwerk wordt hier 30 graden gedraaid zodat je een mooi rondje krijgt. */
+section:not(:last-child) > article {
+	transform: rotate(Calc(30deg*var(--index)))translateY(-15px);
+}
+/* custom properties voor gemakt */
+section:not(:last-child) > article:nth-child(1) {
+	--index: 0;
+}
+
+section:not(:last-child) > article:nth-child(2) {
+	--index: 1;
+}
+
+section:not(:last-child) > article:nth-child(3) {
+	--index: 2;
+}
+
+section:not(:last-child) > article:nth-child(4) {
+	--index: 3;
+}
+
+section:not(:last-child) > article:nth-child(5) {
+	--index: 4;
+}
+
+section:not(:last-child) > article:nth-child(6) {
+	--index: 5;
+}
+
+section:not(:last-child) > article:nth-child(7) {
+	--index: 6;
+}
+
+section:not(:last-child) > article:nth-child(8) {
+	--index: 7;
+}
+
+section:not(:last-child) > article:nth-child(9) {
+	--index: 8;
+}
+
+section:not(:last-child) > article:nth-child(10) {
+	--index: 9;
+}
+
+section:not(:last-child) > article:nth-child(11) {
+	--index: 10;
+}
+
+section:not(:last-child) > article:nth-child(12) {
+	--index: 11;
+}
+
+section:last-child > article:nth-child(1) {
+	--upDown: 10em;
+  	--leftRight: 10em;
+}
+section:last-child > article:nth-child(2) {
+	--upDown: -10em;
+  	--leftRight: 10em;
+}
+section:last-child > article:nth-child(3) {
+	--upDown: 10em;
+  	--leftRight: -10em;
+}
+section:last-child > article:nth-child(4) {
+	--upDown: -10em;
+	  --leftRight: 0em;
+}
+section:last-child > article:nth-child(5) {
+	--upDown: 0em;
+  	--leftRight: 20em;
+}
+section:last-child > article:nth-child(6) {
+	--upDown: 0em;
+  	--leftRight: 10em;
+}
+section:last-child > article:nth-child(7) {
+	--upDown: 10em;
+  	--leftRight: 15em;
+}
+section:last-child > article:nth-child(8) {
+	--upDown: 0em;
+  	--leftRight: -10em;
+}
+section:last-child > article:nth-child(9) {
+	--upDown: 15em;
+  	--leftRight: 15em;
+}
+section:last-child > article:nth-child(10) {
+	--upDown: 5em;
+	  --leftRight: 15em;
+}
+
+
+
+/*-------------------------------------------- animatie vuurpijlen -*/
+@keyframes explosion {
+    0% {
+        top: 100%
+    }
+    33%, 100% {
+        top: -50%;
+    }
+}
+
+/*-------------------------------------------- ander vuurwerk -*/
+@keyframes vuurwerk3 {
+	0% {
+		opacity: 1;
+	  transform: translate(0em, 0em) scale(1);
+	}
+	100% {
+	  transform: translate(var(--leftRight), var(--upDown));
+	  opacity: 0;
+	}
+  
+  }
+
+
+
+/*-------------------------------------------- pijlen van de vuurpijlen -*/
+
+
+/*-------------------------------------------- pijl1 -*/
+main > div:nth-of-type(1) {
+	position: absolute;
+	left: Calc(50vw - 4px);
+    bottom: 0;
+    background-color: red;
+    width: 10px;
+	height:10px;
+	border-radius: 10px;
+	opacity: 0;
+	z-index: 3;
+
+}
+/*-------------------------------------------- pijl2 -*/
+main > div:nth-of-type(2) {
+	position: absolute;
+	background-color: blue;
+	width: 10px;
+	height:10px;
+	border-radius: 10px; 
+	bottom: 0;
+	left: 60vw;
+	opacity: 0;
+	z-index: 3;
+}
+/*-------------------------------------------- pijl3 -*/
+main > div:nth-of-type(3) {
+	position: absolute;
+	background-color: blue;
+	width: 10px;
+	height:10px;
+	border-radius: 10px; 
+	bottom: 0;
+	left: 25vw;
+	opacity: 0;
+	z-index: 3;
+}
+
+/*-------------------------------------------- animaties van de pijlen -*/
+
+
+
+/*-------------------------------------------- Animatie pijl 1 -*/
+@keyframes pijltje1 {
+	0% {
+		top: 100%;
+	}
+	33% {
+		top: 50%;
+		opacity: 1;
+	}
+	33.01% {
+		opacity: 0;
+	}
+	100% {
+		top: 50%;
+		opacity: 0;
+	}
+
+}
+
+
+/*-------------------------------------------- Animatie pijl 2 -*/
+@keyframes pijltje2 {
+	0% {
+		bottom: 0;
+		left: 50vw;
+		opacity:0;
+	}
+	5% {
+		left: 55vw;
+	}
+	10% {
+		left: 60vw;
+	}
+	15% {
+		left: 65vw;
+	}
+	20% {
+		left: 70vw;
+	}
+	25% {
+		left: 80vw;
+	}
+	33% {
+		left: 75vw;
+		bottom: 60vh;
+		opacity: 1;
+	}
+	33.01% {
+		opacity: 0;
+	}
+	100% {
+		bottom: 60vh;
+		opacity: 0;
+	}
+
+}
+
+/*-------------------------------------------- Animatie pijl 3 -*/
+@keyframes pijltje3 {
+
+	0% {
+		bottom: 0vh;
+		opacity: 1;
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+		bottom: 45vh;
+		opacity: 0;
+	}
+}
+
+/*-------------------------------------------- input checkboxes pijlen -*/
+input[type="checkbox"]:nth-of-type(1):checked ~ main > div:nth-of-type(1) {
+	animation: pijltje1 3s cubic-bezier(0.165, 0.840, 0.960, 1.335) 3 forwards;
+	opacity: 1;
+  }
+input[type="checkbox"]:nth-of-type(1):checked ~ main > div:nth-of-type(2) {
+	animation: pijltje2 3s cubic-bezier(0.165, 0.840, 0.960, 1.335) 3 forwards;
+	opacity: 1;
+  }
+input[type="checkbox"]:nth-of-type(1):checked ~ main > div:nth-of-type(3) {
+	animation: pijltje3 1s cubic-bezier(0.100, 0.580, 1.000, 1.650) 3 forwards;
+	animation-delay: 2s;
+  }

@@ -1,0 +1,162 @@
+@import url(../css/vuurwerk.css);
+@import url(../css/atoombom.css);
+/*  wat body styling */
+body {
+	margin: 0;
+	padding: 0;
+	/* Moet een standard waarde hebben anders werkt de thema functie niet */
+	background-color: #323846;
+	text-align: center;
+	
+}
+
+/*-------------------------------------------- content styling -*/
+
+main {
+	background-color: var(--background-color);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*-------------------------------------------- light and dark mode -*/
+
+main > p:nth-of-type(-n+2) {
+	font-size: 4em;
+	margin-top: 1em;
+	position: absolute;
+	top: 0;
+	left: 5vw;
+	opacity: 1;
+	transform: opacity 2s;
+  }
+
+  main > p:nth-of-type(3){
+	font-size: 2.5em;
+	position: absolute;
+	top: 1vh;
+	right: 5vw;
+	margin: 0;
+	visibility: var(--visibility);
+  }
+  main > p:nth-of-type(4){
+	font-size: 2em;
+	position: absolute;
+	top: 5vh;
+	right: 10vw;
+	margin: 0;
+	visibility: var(--visibility);
+  }
+  main > p:nth-of-type(5){
+	font-size: 1em;
+	position: absolute;
+	top: 10vh;
+	right: 8vw;
+	margin: 0;
+	visibility: var(--visibility);
+  }
+  
+  main > p:first-of-type {
+	visibility: var(--visibility);
+  }
+
+input[type="checkbox"]:nth-of-type(1) {
+
+	position: absolute;
+	bottom: 2vh;
+	left: 60%;
+	display: none;
+  } 
+
+/*-------------------------------------------- checkboxes color schemas -*/
+input[type="checkbox"]:nth-of-type(1):checked ~ main {
+	background-color: #323846;
+	transition: background-color 1s;
+  }
+
+p:nth-of-type(2),
+input[type="checkbox"]:nth-of-type(1):checked ~ main p:first-of-type {
+  visibility: var(--visibility);
+}
+
+input[type="checkbox"]:nth-of-type(1):checked ~ main p:nth-of-type(2) {
+  visibility: visible;
+}
+
+input[type="checkbox"]:nth-of-type(1):checked ~ main p:nth-of-type(n+3) {
+	visibility: visible;
+  }
+
+
+/*-------------------------------------------- Landschap styling -*/
+
+main div:nth-of-type(4) {
+	width: 100%;
+	height: 40vh;
+	background-color: green;
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	clip-path: polygon(0% 77%, 3% 69%, 6% 63%, 10% 58%, 14% 57%, 18% 58%, 21% 61%, 23% 65%, 27% 70%, 33% 73%, 38% 73%, 43% 72%, 48% 69%, 54% 64%, 58% 58%, 62% 55%, 67% 54%, 71% 54%, 75% 58%, 78% 63%, 83% 68%, 88% 70%, 92% 71%, 96% 72%, 100% 72%, 100% 100%, 0% 100%);
+}
+
+main div:nth-of-type(5) {
+	position: absolute;
+	background-color: black;
+	bottom: 1vh;
+	width: 10px;
+	height: 20px;
+	z-index: 10;
+}
+
+main div:nth-of-type(6) {
+	position: absolute;
+	background-color: black;
+	bottom: 1vh;
+	left: 25vw;
+	width: 10px;
+	height: 20px;
+	z-index: 10;
+}
+
+
+/*-------------------------------------------- preference styling -*/
+
+@media (prefers-color-scheme: light) {
+	main {
+	  --background-color:#87ceeb;
+	}
+  
+	p:first-of-type {
+	  --visibility: visible;
+	}
+  
+	p:nth-of-type(2) {
+	  --visibility: hidden;
+	}
+	p:nth-of-type(n+3){
+  	  --visibility: hidden;
+	}
+  }
+  
+  @media (prefers-color-scheme: dark) {
+	main {
+	  --background-color: #323846;
+	}
+  
+	p:first-of-type {
+	  --visibility: hidden;
+	}
+  
+	p:nth-of-type(2) {
+	  --visibility: visible;
+	}
+	p:nth-of-type(n+3){
+	   --visibility: visible;
+	}
+  }
+  
+  input[type="checkbox"]:nth-of-type(1):checked ~ main p:first-of-type {
+	visibility: hidden;
+  }

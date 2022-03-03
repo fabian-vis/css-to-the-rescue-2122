@@ -1,0 +1,376 @@
+/*-------------------------------------------- atoombom -*/
+
+main > section > div:nth-of-type(3) {
+	clip-path: polygon(0% 43%, 4% 36%, 9% 32%, 15% 31%, 27% 31%, 39% 31%, 50% 31%, 57% 31%, 65% 40%, 68% 40%, 73% 29%, 100% 27%, 100% 40%, 93% 53%, 100% 67%, 100% 77%, 72% 78%, 68% 67%, 65% 67%, 57% 76%, 13% 76%, 7% 74%, 3% 70%, 0% 66%);
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: -60vh;
+	left: Calc(50% - 20px);
+	background-color: red;
+	transform: rotate(270deg);
+}
+
+
+/*-------------------------------------------- atoombom explosie -*/
+main > section > div:nth-of-type(2) {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 20px;
+	height: 20px;
+	background: rgba(153,50,204,1);
+	border-radius: 50%;
+	opacity: 0;
+	box-shadow: 0 0 20px rgba(153,50,204,1),
+				0 0 40px rgba(153,50,204,1),
+				0 0 60px rgba(153,50,204,1),
+				0 0 80px rgba(153,50,204,1);
+	
+}
+
+
+/*-------------------------------------------- detonator atoombom -*/
+input[type="checkbox"]:nth-of-type(2) {
+	z-index:2;
+	position: absolute;
+	bottom: 2vh;
+	left: 40%;
+	display: none;
+  } 
+
+  body div:nth-of-type(2) label {
+	cursor: pointer;
+	color: white;
+	z-index:2;
+	position: absolute;
+	bottom: 0vh;
+	left: 40%;
+	background-color: red;
+	width: 100px;
+	height: 100px;
+	clip-path: polygon(89% 93%, 89% 84%, 79% 84%, 79% 48%, 88% 48%, 89% 39%, 10% 39%, 10% 46%, 21% 48%, 21% 83%, 10% 84%, 10% 92%);
+  }
+
+  body div:nth-of-type(2) div:first-of-type {
+	background-color:grey;
+	z-index:2;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	bottom: 1vh;
+	left: 40%;
+	clip-path: circle(23.0% at 50% 50%);
+  }
+
+  body div:nth-of-type(2) div:nth-of-type(2) {
+	background-color: black;
+	z-index:2;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	bottom: -0.1vh;
+	left: 40%;
+	opacity: 0.5;
+	clip-path: polygon(89% 38%, 10% 38%, 10% 0%, 89% 0%);
+  }
+
+/*-------------------------------------------- atoombom animaties -*/
+
+@keyframes vallenBom {
+	0% {
+		top: -55vh
+	}
+	99% {
+		opacity:1;
+	}
+	100% {
+		top: -5vh;
+		opacity: 0;
+	}
+}
+
+@keyframes handle {
+	0% {
+		bottom: -0.1vh;
+	}
+	100% {
+		bottom: -2vh;
+	}
+}
+
+@keyframes implosie{
+	0% {
+		opacity: 1;
+		box-shadow: 0 0 20px rgba(153,50,204,1),
+					0 0 40px rgba(0,0,255,1),
+					0 0 60px rgba(153,50,204,1),
+					0 0 80px rgba(0,0,255,1);
+	}
+	25% {
+		box-shadow: 0 0 0 30px rgba(153,50,204,.1),
+					0 0 0 60px rgba(0,0,255,.1),
+					0 0 0 120px rgba(153,50,204,.1),
+					0 0 0 240px rgba(0,0,255,.1),
+					0 0 0 480px rgba(153,50,204,.1),
+					0 0 0 960px rgba(0,0,255,.1);
+		}
+	50% {
+		opacity: 0;
+		box-shadow: 0 0 20px rgba(153,50,204,1),
+					0 0 40px rgba(0,0,255,1),
+					0 0 60px rgba(153,50,204,1),
+					0 0 80px rgba(0,0,255,1);
+	}
+	75% {
+		box-shadow: 0 0 0 30px rgba(153,50,204,1),
+					0 0 0 60px rgba(0,0,255,1),
+					0 0 0 120px rgba(153,50,204,1),
+					0 0 0 240px rgba(0,0,255,1),
+					0 0 0 480px rgba(153,50,204,1),
+					0 0 0 960px rgba(0,0,255,1);
+		}
+
+	81% {
+			box-shadow: 0 0 0 30px rgba(0,0,255,1),
+						0 0 0 60px rgba(153,50,204,1),
+						0 0 0 120px rgba(0,0,255,1),
+						0 0 0 240px rgba(153,50,204,1),
+						0 0 0 480px rgba(0,0,255,1),
+						0 0 0 960px rgba(153,50,204,1);
+			}
+	82% {
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(0,0,255,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(0,0,255,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(0,0,255,1);
+			}	
+
+	83% {
+			box-shadow: 0 0 0 30px rgba(0,0,255,1),
+						0 0 0 60px rgba(153,50,204,1),
+						0 0 0 120px rgba(0,0,255,1),
+						0 0 0 240px rgba(153,50,204,1),
+						0 0 0 480px rgba(0,0,255,1),
+						0 0 0 960px rgba(153,50,204,1);
+			}
+	84% {
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(0,0,255,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(0,0,255,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(0,0,255,1);
+			}	
+	85% {
+			box-shadow: 0 0 0 30px rgba(0,0,255,1),
+						0 0 0 60px rgba(153,50,204,1),
+						0 0 0 120px rgba(0,0,255,1),
+						0 0 0 240px rgba(153,50,204,1),
+						0 0 0 480px rgba(0,0,255,1),
+						0 0 0 960px rgba(153,50,204,1);
+			}
+	86% {
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(0,0,255,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(0,0,255,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(0,0,255,1);
+			}	
+	87% {
+			box-shadow: 0 0 0 30px rgba(0,0,255,1),
+						0 0 0 60px rgba(153,50,204,1),
+						0 0 0 120px rgba(0,0,255,1),
+						0 0 0 240px rgba(153,50,204,1),
+						0 0 0 480px rgba(0,0,255,1),
+						0 0 0 960px rgba(153,50,204,1);
+			}
+	88% {
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(0,0,255,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(0,0,255,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(0,0,255,1);
+			}	
+	89% {
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(0,0,255,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(0,0,255,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(0,0,255,1);
+			}
+	90% {
+			box-shadow: 0 0 0 30px rgba(0,0,255,1),
+						0 0 0 60px rgba(153,50,204,1),
+						0 0 0 120px rgba(0,0,255,1),
+						0 0 0 240px rgba(153,50,204,1),
+						0 0 0 480px rgba(0,0,255,1),
+						0 0 0 960px rgba(153,50,204,1);
+			}
+	91% {
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(0,0,255,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(0,0,255,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(0,0,255,1);
+			}
+	92% {
+			box-shadow: 0 0 0 30px rgba(0,0,255,1),
+						0 0 0 60px rgba(153,50,204,1),
+						0 0 0 120px rgba(0,0,255,1),
+						0 0 0 240px rgba(153,50,204,1),
+						0 0 0 480px rgba(0,0,255,1),
+						0 0 0 960px rgba(153,50,204,1);
+			}
+	93% {
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(0,0,255,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(0,0,255,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(0,0,255,1);
+			}
+	94% {
+			box-shadow: 0 0 0 30px rgba(0,0,255,1),
+						0 0 0 60px rgba(153,50,204,1),
+						0 0 0 120px rgba(0,0,255,1),
+						0 0 0 240px rgba(153,50,204,1),
+						0 0 0 480px rgba(0,0,255,1),
+						0 0 0 960px rgba(153,50,204,1);
+			}
+	95% {
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(0,0,255,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(0,0,255,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(0,0,255,1);
+			}
+	96% {
+			box-shadow: 0 0 0 30px rgba(0,0,255,1),
+						0 0 0 60px rgba(153,50,204,1),
+						0 0 0 120px rgba(0,0,255,1),
+						0 0 0 240px rgba(153,50,204,1),
+						0 0 0 480px rgba(0,0,255,1),
+						0 0 0 960px rgba(153,50,204,1);
+			}
+	97% {
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(0,0,255,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(0,0,255,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(0,0,255,1);
+			}	
+	98% {
+			box-shadow: 0 0 0 30px rgba(0,0,255,1),
+						0 0 0 60px rgba(153,50,204,1),
+						0 0 0 120px rgba(0,0,255,1),
+						0 0 0 240px rgba(153,50,204,1),
+						0 0 0 480px rgba(0,0,255,1),
+						0 0 0 960px rgba(153,50,204,1);
+			}
+	99% {
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(0,0,255,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(0,0,255,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(0,0,255,1);
+			}	
+			
+	100% {
+			opacity: 1;
+			box-shadow: 0 0 0 30px rgba(153,50,204,1),
+						0 0 0 60px rgba(153,50,204,1),
+						0 0 0 120px rgba(153,50,204,1),
+						0 0 0 240px rgba(153,50,204,1),
+						0 0 0 480px rgba(153,50,204,1),
+						0 0 0 960px rgba(153,50,204,1);
+			}
+}
+
+@keyframes shake {
+	10%, 90% {
+	  transform: translate3d(-1px, 0, 0);
+	}
+	
+	20%, 80% {
+	  transform: translate3d(2px, 0, 0);
+	}
+  
+	30%, 50%, 70% {
+	  transform: translate3d(-4px, 0, 0);
+	}
+  
+	40%, 60% {
+	  transform: translate3d(4px, 0, 0);
+	}
+  }
+
+@keyframes laterAarde {
+	0% {
+		left: 5vw;
+		top: 0;
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+		left: 48vw;
+		top: 37vh;
+		opacity: 0;
+	}
+}
+@keyframes openKlappen {
+	0% {
+
+	}
+	100% {
+		transform: rotate(45deg);
+		bottom: 3.9vh;
+	}
+}
+
+@keyframes buttonIndrukken {
+	0% {
+
+	}
+	100% {
+		bottom: -1vh;
+	}
+}
+
+
+
+/*-------------------------------------------- checkboxes atoombom -*/
+input[type="checkbox"]:nth-of-type(2):checked ~ main > section > div:nth-of-type(2) {
+	animation: implosie 4s forwards;
+	animation-delay: 9s;
+  }
+input[type="checkbox"]:nth-of-type(2):checked ~ main > section > div:nth-of-type(3) {
+	animation: vallenBom 4s cubic-bezier(0.895, 0.030, 0.685, 0.220) forwards;
+	animation-delay: 5s;
+  }
+input[type="checkbox"]:nth-of-type(2):checked ~ main p:nth-of-type(-n+2) {
+	animation: shake 1s infinite, laterAarde 1s forwards;
+	animation-delay: 9s, 10s;
+  }
+input[type="checkbox"]:nth-of-type(1):checked ~ div:first-of-type div {
+	animation: handle 0.5s forwards;
+}
+input[type="checkbox"]:nth-of-type(2):checked ~ div:nth-of-type(2) div:first-of-type {
+	animation: buttonIndrukken 2s forwards;
+	animation-delay: 3s;
+}
+input[type="checkbox"]:nth-of-type(2):checked ~ div:nth-of-type(2) div:nth-of-type(2) {
+	animation: openKlappen 3s forwards;
+}
