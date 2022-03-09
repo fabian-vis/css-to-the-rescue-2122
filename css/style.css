@@ -13,7 +13,7 @@ body {
 /*-------------------------------------------- content styling -*/
 
 main {
-	background-color: var(--background-color);
+	background: var(--background-color);
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -71,7 +71,7 @@ input[type="checkbox"]:nth-of-type(1) {
 
 /*-------------------------------------------- checkboxes color schemas -*/
 input[type="checkbox"]:nth-of-type(1):checked ~ main {
-	background-color: #323846;
+	background: linear-gradient(0deg, rgba(77,147,176,1) 11%, rgba(49,126,158,1) 30%, rgba(27,121,159,1) 49%, rgba(5,30,41,1) 87%);
 	transition: background-color 1s;
   }
 
@@ -93,31 +93,103 @@ input[type="checkbox"]:nth-of-type(1):checked ~ main p:nth-of-type(n+3) {
 
 main div:nth-of-type(4) {
 	width: 100%;
-	height: 40vh;
-	background-color: green;
+	height: 10vh;
+	background: linear-gradient(0deg, rgba(1,74,14,1) 8%, rgba(1,91,15,1) 35%, rgba(4,97,17,1) 63%, rgba(4,111,15,1) 94%);
 	position: absolute;
 	bottom: 0;
 	z-index: 1;
-	clip-path: polygon(0% 77%, 3% 69%, 6% 63%, 10% 58%, 14% 57%, 18% 58%, 21% 61%, 23% 65%, 27% 70%, 33% 73%, 38% 73%, 43% 72%, 48% 69%, 54% 64%, 58% 58%, 62% 55%, 67% 54%, 71% 54%, 75% 58%, 78% 63%, 83% 68%, 88% 70%, 92% 71%, 96% 72%, 100% 72%, 100% 100%, 0% 100%);
+	
 }
 
 main div:nth-of-type(5) {
 	position: absolute;
 	background-color: black;
-	bottom: 1vh;
+	bottom: 0;
 	width: 10px;
 	height: 20px;
-	z-index: 10;
+	z-index: 2;
 }
 
 main div:nth-of-type(6) {
 	position: absolute;
 	background-color: black;
-	bottom: 1vh;
+	bottom: 0;
 	left: 25vw;
 	width: 10px;
 	height: 20px;
-	z-index: 10;
+	z-index: 2;
+}
+/*-------------------------------------------- Wolkjes -*/
+main div:nth-of-type(7) {
+	position: absolute;
+	bottom: 50vh;
+	left: -25vw;
+	width: 10vw;
+	height: 10vh;
+	z-index: 2;
+	background-image: url("../images/cloud.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	filter: sepia(60%);
+	animation: wolkje 20s infinite;
+}
+
+main div:nth-of-type(8) {
+	position: absolute;
+	bottom: 45vh;
+	left: -25vw;
+	width: 10vw;
+	height: 10vh;
+	z-index: 2;
+	background-image: url("../images/cloud.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	filter: sepia(60%);
+	animation: wolkje2 15s infinite;
+	animation-delay: 0.5s;
+	transform: scale(0.5);
+}
+main div:nth-of-type(9) {
+	position: absolute;
+	bottom: 60vh;
+	left: -25vw;
+	width: 10vw;
+	height: 10vh;
+	z-index: 2;
+	background-image: url("../images/cloud.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	filter: sepia(60%);
+	animation: wolkje3 20s infinite;
+	animation-delay: 1s;
+	transform: scale(0.7);
+}
+
+@keyframes wolkje {
+	0% {
+		left: -10vw;
+	}
+	100% {
+		left: 110vw;
+	}
+}
+
+@keyframes wolkje2 {
+	0% {
+		left: -10vw;
+	}
+	100% {
+		left: 110vw;
+	}
+}
+
+@keyframes wolkje3 {
+	0% {
+		left: -10vw;
+	}
+	100% {
+		left: 110vw;
+	}
 }
 
 
@@ -142,7 +214,7 @@ main div:nth-of-type(6) {
   
   @media (prefers-color-scheme: dark) {
 	main {
-	  --background-color: #323846;
+	  --background-color: linear-gradient(0deg, rgba(77,147,176,1) 11%, rgba(49,126,158,1) 30%, rgba(27,121,159,1) 49%, rgba(5,30,41,1) 87%);
 	}
   
 	p:first-of-type {

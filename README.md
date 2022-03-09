@@ -14,6 +14,15 @@ Het werken met animaties is voor mij nieuw. Ik hoop daarom tijdens dit vak ook v
 
 ![Beoordelingscriteria](images/beoordelingscriteria.png)
 
+## To do
+
+| To do               | Done? |
+| :------------------ | :---- |
+| Vuurwerk animatie   | ✅    |
+| Checkbox css only   | ✅    |
+| Light and dark mode | ✅    |
+| Details buttons     | ✅    |
+
 ## License
 
 MIT License.
