@@ -23,6 +23,11 @@ Het werken met animaties is voor mij nieuw. Ik hoop daarom tijdens dit vak ook v
 | Light and dark mode | ✅    |
 | Details buttons     | ✅    |
 
+## Wat zou ik nog willen toevoegen?
+
+- Als ik nog tijd over had zou ik van de atoombom button maken dat je eerst moet klikken op de kap om hem open te maken en dan nog een keer klikken om de animatie te starten. Nu is het 1 voelende beweging.
+- Ik vond het erg leuk om de minecraft lever na te maken. Als ik meer tijd had zou ik proberen om in 2d iets anders van minecraft na te willen maken. Ik had bijvoorbeeld een boomstam gezien. Het leek me dan erg cool om deze exact na te maken met allemaal divjes. Helaas had ik hier geen tijd meer voor.
+
 ## License
 
 MIT License.
