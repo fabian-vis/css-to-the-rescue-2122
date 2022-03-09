@@ -6,7 +6,7 @@ Welkom bij mijn project van de minor Webdesign and development. Het doel van dit
 
 Hier kan je de pagina bekijken [Vuurwerkshow](https://fabian-vis.github.io/vuurwerk-je-/ "Vuurwerkshow")
 
-Mijn procesverslag is hier te bekijken[procesverslag](https://github.com/fabian-vis/vuurwerk-je-/wiki "procesverslag")
+Mijn procesverslag is hier te bekijken [procesverslag](https://github.com/fabian-vis/vuurwerk-je-/wiki "procesverslag")
 
 ## Leerproces
 
