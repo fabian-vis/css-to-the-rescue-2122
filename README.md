@@ -42,6 +42,8 @@ Het werken met animaties is voor mij nieuw. Ik hoop daarom tijdens dit vak ook v
 
 - [Sinds1971](https://www.sinds1971.nl "Sinds1971")
 
+- [Clippy](https://bennettfeely.com/clippy/ "Clippy")
+
 ## License
 
 MIT License.
