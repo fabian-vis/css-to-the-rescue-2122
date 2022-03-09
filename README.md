@@ -30,6 +30,18 @@ Het werken met animaties is voor mij nieuw. Ik hoop daarom tijdens dit vak ook v
 - Als ik nog tijd over had zou ik van de atoombom button maken dat je eerst moet klikken op de kap om hem open te maken en dan nog een keer klikken om de animatie te starten. Nu is het 1 voelende beweging.
 - Ik vond het erg leuk om de minecraft lever na te maken. Als ik meer tijd had zou ik proberen om in 2d iets anders van minecraft na te willen maken. Ik had bijvoorbeeld een boomstam gezien. Het leek me dan erg cool om deze exact na te maken met allemaal divjes. Helaas had ik hier geen tijd meer voor.
 
+## Bronnen
+
+- [W3Schools](https://www.w3schools.com "W3Schools")
+
+- [CSS Gradient](https://cssgradient.io "CSS Gradient")
+
+- [MDN](https://developer.mozilla.org/en-US/ "MDN")
+
+- [Stackoverflow](https://stackoverflow.com "Stackoverflow")
+
+- [Sinds1971](https://www.sinds1971.nl "Sinds1971")
+
 ## License
 
 MIT License.
